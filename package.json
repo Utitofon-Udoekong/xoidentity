@@ -1,0 +1,17 @@
+{
+  "name": "xoidentity",
+  "private": true,
+  "description": "BCH BLAZE 2026 — XO templates that commit a bchblaze-id binding and pay the bound address",
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev": "pnpm --filter @bchblaze/identity build && pnpm --filter @bchblaze/xoidentity dev",
+    "build": "pnpm --filter @bchblaze/identity build && pnpm --filter @bchblaze/xoidentity build",
+    "test": "pnpm --filter @bchblaze/identity test",
+    "validate": "pnpm --filter @bchblaze/xo-templates validate",
+    "broadcast": "pnpm --filter @bchblaze/identity build && pnpm --filter @bchblaze/xoidentity broadcast",
+    "typecheck": "pnpm --filter @bchblaze/identity typecheck"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

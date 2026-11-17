@@ -1,0 +1,14 @@
+node_modules/
+dist/
+coverage/
+.next/
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
+.pnpm-store/
+artifacts/
+typechain-types/
+cache/solidcash/
+apps/xoidentity/.xo/
