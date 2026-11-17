@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+body {
+  @apply bg-ink-950 font-sans text-slate-100 antialiased;
+  background-image:
+    radial-gradient(820px 420px at 100% -8%, rgba(108, 92, 231, 0.22), transparent 58%),
+    radial-gradient(720px 380px at -8% -4%, rgba(10, 193, 142, 0.16), transparent 52%);
+}
+
+h1 {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }

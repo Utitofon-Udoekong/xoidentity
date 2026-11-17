@@ -1,0 +1,71 @@
+{
+  "network": "chipnet",
+  "fundingAddress": "bchtest:qpsqxdt89rxf5jqvs345q7p0d6m3makwwvp85jjg2a",
+  "faucetTxid": null,
+  "boundAddress": "bchtest:qzuq8ald23rt0vsyufgrcv0h0gf8sq74qcq9j5hy2g",
+  "binding": {
+    "protocol": "bchblaze-id",
+    "version": "1.0.0",
+    "statement": {
+      "protocol": "bchblaze-id",
+      "version": "1.0.0",
+      "bindingId": "2dd771d0d8e47c1c489d503131beb151b6cb55d0be0e8f77a4776b341322ee95",
+      "bchAddress": "bchtest:qzuq8ald23rt0vsyufgrcv0h0gf8sq74qcq9j5hy2g",
+      "bchNetwork": "chipnet",
+      "nostrPubkey": "91223560525e70c01a66a8f92ad2da33a79b3750bb9411f346f44ae6d340f829",
+      "createdAt": 1794955286,
+      "purpose": "identity-binding",
+      "nonce": "b83641f8dd7db6ac64f5c09a59e6e151cf21d23ba68c865c2a37a2c7f23f26ee"
+    },
+    "bchSignature": "INsVpPY6ZfnId7PJklhb/re9Aq8U/vc+XUMERf2jBMiKJ7HmniLLrTtT867nrCkckxaacLwTqPZb0LpJVAZk6Hg=",
+    "event": {
+      "kind": 30734,
+      "created_at": 1794955286,
+      "tags": [
+        [
+          "d",
+          "bchblaze-id/v1"
+        ],
+        [
+          "i",
+          "bch:bchtest:qzuq8ald23rt0vsyufgrcv0h0gf8sq74qcq9j5hy2g",
+          "INsVpPY6ZfnId7PJklhb/re9Aq8U/vc+XUMERf2jBMiKJ7HmniLLrTtT867nrCkckxaacLwTqPZb0LpJVAZk6Hg="
+        ],
+        [
+          "bch",
+          "bchtest:qzuq8ald23rt0vsyufgrcv0h0gf8sq74qcq9j5hy2g",
+          "chipnet"
+        ],
+        [
+          "binding",
+          "2dd771d0d8e47c1c489d503131beb151b6cb55d0be0e8f77a4776b341322ee95"
+        ],
+        [
+          "network",
+          "chipnet"
+        ],
+        [
+          "protocol",
+          "bchblaze-id",
+          "1.0.0"
+        ]
+      ],
+      "content": "bchblaze-id/bch-proof/v1\n{\"bchAddress\":\"bchtest:qzuq8ald23rt0vsyufgrcv0h0gf8sq74qcq9j5hy2g\",\"bchNetwork\":\"chipnet\",\"bindingId\":\"2dd771d0d8e47c1c489d503131beb151b6cb55d0be0e8f77a4776b341322ee95\",\"createdAt\":1794955286,\"nonce\":\"b83641f8dd7db6ac64f5c09a59e6e151cf21d23ba68c865c2a37a2c7f23f26ee\",\"nostrPubkey\":\"91223560525e70c01a66a8f92ad2da33a79b3750bb9411f346f44ae6d340f829\",\"protocol\":\"bchblaze-id\",\"purpose\":\"identity-binding\",\"version\":\"1.0.0\"}",
+      "pubkey": "91223560525e70c01a66a8f92ad2da33a79b3750bb9411f346f44ae6d340f829",
+      "id": "f94c67ea927ff052c517a64285da88e94ce8784b0bf5331da1240be43d1b4728",
+      "sig": "762fef4679d7cfaa90fcbf7c40332c5e0c92aeb25a74801ad37e839c7439fad29ea13fa23a3a1f8dd9efc5452d472a41941056d89708f9ceeb46788e9c52d41b"
+    }
+  },
+  "claims": [
+    {
+      "name": "commitBinding",
+      "txid": "41753d81623d718675136efcd436d3911c341c2ad67a0e670cfdc55405731a88",
+      "explorer": "https://explorer.selene.cash/tx/41753d81623d718675136efcd436d3911c341c2ad67a0e670cfdc55405731a88?network=chipnet"
+    },
+    {
+      "name": "payBoundIdentity",
+      "txid": "3dc88494f383fc5f019ad377b81704f30c38686f43f2fff6a620020bc223baf4",
+      "explorer": "https://explorer.selene.cash/tx/3dc88494f383fc5f019ad377b81704f30c38686f43f2fff6a620020bc223baf4?network=chipnet"
+    }
+  ]
+}
