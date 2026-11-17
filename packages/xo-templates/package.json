@@ -1,0 +1,21 @@
+{
+  "name": "@bchblaze/xo-templates",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "XO templates that commit a bchblaze-id binding and pay the bound address.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "validate": "node --experimental-strip-types scripts/validate.ts"
+  },
+  "dependencies": {
+    "@bchblaze/identity": "workspace:*",
+    "@xo-cash/types": "0.0.8",
+    "@xo-cash/utils": "0.0.10"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
