@@ -1,4 +1,6 @@
-# XOIdentity
+# XOIdentity desk
+
+The build description is the [repository README](../../README.md). This note is the broadcast the desk displays.
 
 Two XO templates and a chipnet invitation runner.
 
