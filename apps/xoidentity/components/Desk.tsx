@@ -10,7 +10,7 @@ interface ClaimRow {
 }
 
 interface ResultFile {
-  network: "chipnet";
+  network: "mainnet" | "chipnet";
   fundingAddress: string;
   faucetTxid: string | null;
   boundAddress: string;
@@ -41,7 +41,7 @@ export function Desk() {
 
   useEffect(() => {
     let cancelled = false;
-    void fetch("/chipnet-result.json")
+    void fetch("/mainnet-result.json")
       .then(async (response) => {
         if (!response.ok) return null;
         return (await response.json()) as ResultFile;
@@ -70,9 +70,9 @@ export function Desk() {
       </div>
 
       <section>
-          <h2>Chipnet</h2>
-          {result === null ? (
-            <p className="mt-3 text-sm text-ink/60">No broadcast yet.</p>
+          <h2>Mainnet</h2>
+          {result === null || result.network !== "mainnet" ? (
+            <p className="mt-3 text-sm text-ink/60">No mainnet broadcast yet.</p>
           ) : (
             <div className="mt-4 space-y-4 text-sm">
               <p className="break-all font-mono text-xs">{result.boundAddress}</p>
@@ -91,7 +91,7 @@ export function Desk() {
 
       <section className="border-t border-ink pt-6">
           <h2>Check a binding</h2>
-          <p className="lede">Paste a Nostrobridge record. A valid one names the address the payment template pays.</p>
+          <p className="lede">Paste a mainnet Nostrobridge record. A valid one names the address the payment template pays.</p>
           <textarea
             value={pasted}
             onChange={(event) => setPasted(event.target.value)}
@@ -106,6 +106,10 @@ export function Desk() {
               const checked = verify(pasted);
               if (!checked.ok || checked.binding === undefined) {
                 setPasteNote(checked.details.join(" "));
+                return;
+              }
+              if (checked.binding.statement.bchNetwork !== "mainnet") {
+                setPasteNote("The binding is valid, and its address is not mainnet.");
                 return;
               }
               setPasteNote(checked.binding.statement.bchAddress);
