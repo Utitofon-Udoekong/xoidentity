@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev --port 3002",
-    "build": "next build",
+    "build": "pnpm --filter @bchblaze/identity run build && next build",
     "start": "next start --port 3002",
     "broadcast": "node --experimental-strip-types scripts/broadcast.ts"
   },
