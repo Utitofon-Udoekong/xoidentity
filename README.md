@@ -2,9 +2,11 @@
 
 ![XOIdentity](apps/xoidentity/public/logo.jpg)
 
-Commit a binding, then pay that address. Two XO templates. One writes the binding id into a CashToken. The other pays the Bitcoin Cash address inside the binding.
+Template: https://docs.google.com/presentation/d/1tAXM_mXYZAIU1D6sTPabc3-kmPcuEnWjl8D15JsQtdY/edit?usp=sharing
+github: https://github.com/Utitofon-Udoekong/xoidentity
+cashtokenaddress: bitcoincash:zq5hh46r4kudjpsayg58gu99h03p00nw4csaumqgy0
 
-Repository: https://github.com/Utitofon-Udoekong/xoidentity
+Commit a binding, then pay that address. Two XO templates. One writes the binding id into a CashToken. The other pays the Bitcoin Cash address inside the binding.
 
 ## The problem
 
@@ -52,6 +54,7 @@ No mainnet transaction is published yet. The desk says so until `public/mainnet-
 | Mainnet address inside the binding | The desk rejects a chipnet or testnet record |
 | The same identity proof as Nostrobridge | `verify()` on the pasted mainnet record |
 | Keys stay out of the app | Throwaway mnemonic is gitignored. The desk does not ask for it |
+| Top-of-page banner | Presentation, GitHub, and the EMBER2026 address |
 
 ## Run
 

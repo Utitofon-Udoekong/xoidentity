@@ -1,4 +1,4 @@
-import { runChipnet } from "../lib/run-chipnet.ts";
+import { runChipnet } from "../lib/run-chipnet";
 
 process.on("unhandledRejection", (reason) => {
   const message = reason instanceof Error ? reason.message : String(reason);

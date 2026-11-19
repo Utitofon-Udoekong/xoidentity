@@ -74,7 +74,7 @@ function readStatement(value: unknown): Record<string, unknown> | null {
   return statement as Record<string, unknown>;
 }
 
-function checkStatement(statement: Record<string, unknown>): PasteState {
+function checkStatement(statement: BindingStatement | Record<string, unknown>): PasteState {
   let commitment: "ok" | "fail" = "fail";
   let commitmentHex = "";
   let locking: "ok" | "fail" = "fail";
