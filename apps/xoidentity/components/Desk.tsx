@@ -195,7 +195,9 @@ export function Desk() {
 
       <section className="border-t border-ink pt-6">
           <h2>Check a binding</h2>
-          <p className="lede">Paste a mainnet Nostrobridge record. A valid one names the address the payment template pays.</p>
+          <p className="lede">
+            Paste a mainnet <a href="https://nostrobridge.vercel.app/">Nostrobridge</a> record. A valid one names the address the payment template pays.
+          </p>
           <textarea
             value={pasted}
             onChange={(event) => setPasted(event.target.value)}

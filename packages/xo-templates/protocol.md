@@ -61,4 +61,4 @@ The app writes the txid and the chipnet explorer URL after `executeAction` retur
 
 ## Migration from Nostro
 
-Nostrobridge collects a cashaddr with WizardConnect or Paytaca, a NIP-07 signature, and publishes a kind 30734 event. That event stays the binding. The XO payment replaces the manual "paste an address and send" step: `verify()` yields `statement.bchAddress`, the app turns that into `boundLockingScript`, and `payBoundIdentity` builds the transaction. The wallet's keys stay inside the engine account instead of a page-level Paytaca call.
+[Nostrobridge](https://nostrobridge.vercel.app/) collects a cashaddr with WizardConnect or Paytaca, a NIP-07 signature, and publishes a kind 30734 event. That event stays the binding. The XO payment replaces the manual "paste an address and send" step: `verify()` yields `statement.bchAddress`, the app turns that into `boundLockingScript`, and `payBoundIdentity` builds the transaction. The wallet's keys stay inside the engine account instead of a page-level Paytaca call.

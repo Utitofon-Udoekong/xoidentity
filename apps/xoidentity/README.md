@@ -33,6 +33,6 @@ Then:
 pnpm --filter @bchblaze/xoidentity dev
 ```
 
-Open http://localhost:3002. The page shows the txids. A pasted Nostrobridge kind 30734 event is checked with `verify()` and the cashaddr it names is the address `payBoundIdentity` pays.
+The live demo is https://xoidentity.vercel.app/. The page shows the txids. A pasted [Nostrobridge](https://nostrobridge.vercel.app/) kind 30734 event is checked with `verify()` and the cashaddr it names is the address `payBoundIdentity` pays.
 
 Set `XO_MNEMONIC` to reuse an account that already has chipnet coins. The script skips the faucet when the account already has a spendable output of at least 8,000 satoshis.
