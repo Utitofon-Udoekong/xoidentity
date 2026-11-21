@@ -1,6 +1,6 @@
 const PRESENTATION = "https://docs.google.com/presentation/d/1tAXM_mXYZAIU1D6sTPabc3-kmPcuEnWjl8D15JsQtdY/edit?usp=sharing";
 const GITHUB = "https://github.com/Utitofon-Udoekong/xoidentity";
-const EMBER = "bitcoincash:zq5hh46r4kudjpsayg58gu99h03p00nw4csaumqgy0";
+const EMBER = "bitcoincash:zrf7lfu7ec657h69me9wm8ye04w36nxfzy6jdvqeqd";
 
 export function HomeBanner() {
   return (

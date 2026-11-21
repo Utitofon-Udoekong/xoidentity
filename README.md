@@ -5,7 +5,7 @@
 Template: https://docs.google.com/presentation/d/1tAXM_mXYZAIU1D6sTPabc3-kmPcuEnWjl8D15JsQtdY/edit?usp=sharing
 github: https://github.com/Utitofon-Udoekong/xoidentity
 site: https://xoidentity.vercel.app/
-cashtokenaddress: bitcoincash:zq5hh46r4kudjpsayg58gu99h03p00nw4csaumqgy0
+cashtokenaddress: bitcoincash:zrf7lfu7ec657h69me9wm8ye04w36nxfzy6jdvqeqd
 
 Commit a binding, then pay that address. Two XO templates. One writes the binding id into a CashToken. The other pays the Bitcoin Cash address inside the binding.
 
