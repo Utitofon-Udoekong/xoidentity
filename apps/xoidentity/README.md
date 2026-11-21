@@ -14,9 +14,11 @@ From the repo root:
 pnpm install
 pnpm --filter @bchblaze/identity build
 pnpm --filter @bchblaze/xo-templates validate
-pnpm --filter @bchblaze/xoidentity broadcast
 ```
 
-`broadcast` uses a mainnet wallet under `apps/xoidentity/.xo/` (gitignored). When that wallet has no spendable coin of at least 8,000 satoshis, it prints a `bitcoincash:` receive address and waits. Send 20,000 satoshis to that address from your own wallet. It then broadcasts the commit and the payment, and writes `apps/xoidentity/public/mainnet-result.json`.
+The live demo is https://xoidentity.vercel.app/. It reads `public/mainnet-result.json`.
 
-The live demo is https://xoidentity.vercel.app/. The page shows those mainnet transactions after the result file is published. A pasted [Nostrobridge](https://nostrobridge.vercel.app/) kind 30734 event is checked with `verify()` and the cashaddr it names is the address `payBoundIdentity` pays.
+- Commit: https://blockchair.com/bitcoin-cash/transaction/efab4243dc02fd3148e2e41879200ec4c14662293272e441618741a9c9e62e5f
+- Payment: https://blockchair.com/bitcoin-cash/transaction/03da003e0e00bdbfcdde2f62d5354ad3f361a5fe8ce1faf4cc5421919169bbd0
+
+The payment's first output is `bitcoincash:qzua7k4ur7z4a7tgsj50rdvdwh530mq3n547d4uhx9`. The binding id is `c3e6c7ec5ab2db1903c2fc20c57b3af02735492dc67ec8d0241105753a03cf43`. A pasted [Nostrobridge](https://nostrobridge.vercel.app/) kind 30734 event is checked with `verify()` and the cashaddr it names is the address `payBoundIdentity` pays.

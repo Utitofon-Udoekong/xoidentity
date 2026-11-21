@@ -15,7 +15,7 @@ A [Nostrobridge](https://nostrobridge.vercel.app/) binding is a signed statement
 
 ## How it works
 
-`IdentityBind` mints an immutable CashToken. The NFT commitment is the 32-byte binding id from `@bchblaze/identity`. The XO engine drops outputs of zero satoshis, so the binding is not an `OP_RETURN`. Genesis has to spend output 0, so the broadcast first consolidates a faucet coin.
+`IdentityBind` mints an immutable CashToken. The NFT commitment is the 32-byte binding id from `@bchblaze/identity`. The XO engine drops outputs of zero satoshis, so the binding is not an `OP_RETURN`. Genesis has to spend output 0, so the broadcast first consolidates the funded coin.
 
 `PayToBoundIdentity` pays 2,000 satoshis to the P2PKH locking script of the mainnet cashaddr inside that binding. The binding id is recorded on the invitation. The coins go to the address.
 
@@ -30,7 +30,12 @@ The desk reads `public/mainnet-result.json`. `pnpm broadcast` writes that file a
 - **Check a binding.** Paste a mainnet [Nostrobridge](https://nostrobridge.vercel.app/) record. A valid one names the address the payment template pays.
 - **No key in the page.** The desk displays a published mainnet result and runs `verify()`.
 
-No mainnet transaction is published yet. The desk says so until `public/mainnet-result.json` exists.
+The published mainnet transactions are in `public/mainnet-result.json`:
+
+- Commit: https://blockchair.com/bitcoin-cash/transaction/efab4243dc02fd3148e2e41879200ec4c14662293272e441618741a9c9e62e5f
+- Payment: https://blockchair.com/bitcoin-cash/transaction/03da003e0e00bdbfcdde2f62d5354ad3f361a5fe8ce1faf4cc5421919169bbd0
+
+The payment sends 2,000 satoshis to `bitcoincash:qzua7k4ur7z4a7tgsj50rdvdwh530mq3n547d4uhx9`. The binding id is `c3e6c7ec5ab2db1903c2fc20c57b3af02735492dc67ec8d0241105753a03cf43`.
 
 ## Tech stack
 
@@ -43,7 +48,7 @@ No mainnet transaction is published yet. The desk says so until `public/mainnet-
 | Network | Mainnet. `pnpm broadcast` uses the mainnet engine |
 | Package manager | pnpm 9.15, Node 18+ |
 
-`pnpm broadcast` prints a mainnet receive address when that wallet has no coins. Send 20,000 satoshis there from your own wallet. The command then commits the binding and pays the address inside it.
+`pnpm broadcast` is what wrote that file. It uses the gitignored wallet in `apps/xoidentity/.xo/`. Running it again starts another commit.
 
 ## Hackathon requirements
 
@@ -54,7 +59,7 @@ No mainnet transaction is published yet. The desk says so until `public/mainnet-
 | Pay the address inside the binding | First output of the pay transaction |
 | Mainnet address inside the binding | The desk rejects a chipnet or testnet record |
 | The same identity proof as [Nostrobridge](https://nostrobridge.vercel.app/) | `verify()` on the pasted mainnet record |
-| Keys stay out of the app | Throwaway mnemonic is gitignored. The desk does not ask for it |
+| Keys stay out of the app | The broadcast wallet in `apps/xoidentity/.xo/` is gitignored. The desk does not ask for it |
 | Top-of-page banner | Presentation, GitHub, and the EMBER2026 address |
 
 ## Run
