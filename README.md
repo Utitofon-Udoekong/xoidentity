@@ -21,7 +21,7 @@ A [Nostrobridge](https://nostrobridge.vercel.app/) binding is a signed statement
 
 Both templates are checked with `parseTemplate` and `engine.importTemplate`. The protocol note is `packages/xo-templates/protocol.md`. The desk checks a pasted mainnet [Nostrobridge](https://nostrobridge.vercel.app/) record with the same offline `verify()`. A chipnet or testnet record is rejected.
 
-The desk reads `public/mainnet-result.json`. No mainnet broadcast is published yet. An earlier chipnet run remains in `public/chipnet-result.json` and is not shown.
+The desk reads `public/mainnet-result.json`. `pnpm broadcast` writes that file after the mainnet commit and payment.
 
 ## Key features
 
@@ -40,10 +40,10 @@ No mainnet transaction is published yet. The desk says so until `public/mainnet-
 | Templates | `@bchblaze/xo-templates`, wallet-template shape, VM `BCH_2023_05` through `BCH_2026_05` |
 | Engine | `@xo-cash/engine` 0.1.0-next.17612568780, `@xo-cash/utils` 0.0.10, `@bitauth/libauth` |
 | Identity | `@bchblaze/identity`, offline `verify()` |
-| Network | Mainnet. The desk ignores the earlier chipnet result file |
+| Network | Mainnet. `pnpm broadcast` uses the mainnet engine |
 | Package manager | pnpm 9.15, Node 18+ |
 
-`pnpm broadcast` still targets chipnet and is not the mainnet path. A mainnet result has to be written to `public/mainnet-result.json` from a funded wallet.
+`pnpm broadcast` prints a mainnet receive address when that wallet has no coins. Send 20,000 satoshis there from your own wallet. The command then commits the binding and pays the address inside it.
 
 ## Hackathon requirements
 

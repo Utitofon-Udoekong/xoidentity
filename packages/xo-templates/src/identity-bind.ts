@@ -3,7 +3,7 @@ import type { XOTemplate } from "@xo-cash/types";
 const SCHEMA = "https://libauth.org/schemas/wallet-template-v0.schema.json";
 
 /**
- * Commits a bchblaze-id binding id on chipnet or mainnet.
+ * Commits a bchblaze-id binding id on mainnet.
  * The id is the commitment of an immutable CashToken NFT locked to the holder.
  * Genesis requires the spent outpoint to be index 0, so `consolidate` moves a
  * coin there before `commitBinding` mints it.

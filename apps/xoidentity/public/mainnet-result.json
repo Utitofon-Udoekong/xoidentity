@@ -1,0 +1,71 @@
+{
+  "network": "mainnet",
+  "fundingAddress": "bitcoincash:qq57568funhvlvndtt3tpry4ad9pv9u6ssa37n6w9d",
+  "faucetTxid": null,
+  "boundAddress": "bitcoincash:qzua7k4ur7z4a7tgsj50rdvdwh530mq3n547d4uhx9",
+  "binding": {
+    "protocol": "bchblaze-id",
+    "version": "1.0.0",
+    "statement": {
+      "protocol": "bchblaze-id",
+      "version": "1.0.0",
+      "bindingId": "c3e6c7ec5ab2db1903c2fc20c57b3af02735492dc67ec8d0241105753a03cf43",
+      "bchAddress": "bitcoincash:qzua7k4ur7z4a7tgsj50rdvdwh530mq3n547d4uhx9",
+      "bchNetwork": "mainnet",
+      "nostrPubkey": "c6d7ca3c3d690a83eca3489bb7ed7f8ffefef034cbbeb4e32e5d9bb852f1562c",
+      "createdAt": 1795254688,
+      "purpose": "identity-binding",
+      "nonce": "358a6dba00b29b636e7ea2db9e39f6eca421bd3dc812b2aca7c7221aa664f5ac"
+    },
+    "bchSignature": "ICldey5qCzh0NK/+Go+M7Dm9UnzkbrKFTy4K2fJVJPTXIQvOp4kxCHgH0aRsEMG+XnqBYt3wPh/JNXGrlF7c898=",
+    "event": {
+      "kind": 30734,
+      "created_at": 1795254688,
+      "tags": [
+        [
+          "d",
+          "bchblaze-id/v1"
+        ],
+        [
+          "i",
+          "bch:bitcoincash:qzua7k4ur7z4a7tgsj50rdvdwh530mq3n547d4uhx9",
+          "ICldey5qCzh0NK/+Go+M7Dm9UnzkbrKFTy4K2fJVJPTXIQvOp4kxCHgH0aRsEMG+XnqBYt3wPh/JNXGrlF7c898="
+        ],
+        [
+          "bch",
+          "bitcoincash:qzua7k4ur7z4a7tgsj50rdvdwh530mq3n547d4uhx9",
+          "mainnet"
+        ],
+        [
+          "binding",
+          "c3e6c7ec5ab2db1903c2fc20c57b3af02735492dc67ec8d0241105753a03cf43"
+        ],
+        [
+          "network",
+          "mainnet"
+        ],
+        [
+          "protocol",
+          "bchblaze-id",
+          "1.0.0"
+        ]
+      ],
+      "content": "bchblaze-id/bch-proof/v1\n{\"bchAddress\":\"bitcoincash:qzua7k4ur7z4a7tgsj50rdvdwh530mq3n547d4uhx9\",\"bchNetwork\":\"mainnet\",\"bindingId\":\"c3e6c7ec5ab2db1903c2fc20c57b3af02735492dc67ec8d0241105753a03cf43\",\"createdAt\":1795254688,\"nonce\":\"358a6dba00b29b636e7ea2db9e39f6eca421bd3dc812b2aca7c7221aa664f5ac\",\"nostrPubkey\":\"c6d7ca3c3d690a83eca3489bb7ed7f8ffefef034cbbeb4e32e5d9bb852f1562c\",\"protocol\":\"bchblaze-id\",\"purpose\":\"identity-binding\",\"version\":\"1.0.0\"}",
+      "pubkey": "c6d7ca3c3d690a83eca3489bb7ed7f8ffefef034cbbeb4e32e5d9bb852f1562c",
+      "id": "7a953d26beca97bde05130918275a763a10cd8988e1896db74e5bc2944e741f7",
+      "sig": "4c4d13b1cb5a1e3b6a8e479ec199d8b6a3faafd420963d01ea8d5782d60e1081563cb3145bf1749722bbf3989ecbd6eaea259e1f699c5a7f4424f12a37f4bcd0"
+    }
+  },
+  "claims": [
+    {
+      "name": "commitBinding",
+      "txid": "efab4243dc02fd3148e2e41879200ec4c14662293272e441618741a9c9e62e5f",
+      "explorer": "https://blockchair.com/bitcoin-cash/transaction/efab4243dc02fd3148e2e41879200ec4c14662293272e441618741a9c9e62e5f"
+    },
+    {
+      "name": "payBoundIdentity",
+      "txid": "03da003e0e00bdbfcdde2f62d5354ad3f361a5fe8ce1faf4cc5421919169bbd0",
+      "explorer": "https://blockchair.com/bitcoin-cash/transaction/03da003e0e00bdbfcdde2f62d5354ad3f361a5fe8ce1faf4cc5421919169bbd0"
+    }
+  ]
+}
